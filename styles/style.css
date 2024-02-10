@@ -6,9 +6,8 @@
   font-family: var(--main-font);
   color: var(--main-text-color);
   background-image: url(../images/cover-image-dark.png);
-  background-size: 100% 1024px;
-  background-position: top center;
-  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   background-attachment: fixed;
 }
 
@@ -300,4 +299,71 @@
   .content:nth-of-type(3) .content__text-block-item {
     margin-block-end: 0;
   }
+}
+
+/* Галерея */
+
+.gallary {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 80px 20px 60px 20px;
+}
+
+.content__picture {
+  display: block;
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: cover;
+}
+
+.gallary .content__subtitle {
+  grid-column: span 3;
+}
+
+.gallary__item:first-of-type {
+  grid-column: span 2;
+}
+
+.gallary__item:nth-of-type(2) {
+  grid-row: span 2;
+}
+
+.gallary__item:nth-of-type(3) {
+  grid-row: span 2;
+}
+
+.gallary__item:last-of-type {
+  grid-column: span 2;
+}
+
+@media (width < 576px) {
+  .gallary {
+    display: block;
+    padding: 50px 10px 5px;
+  }
+
+  .gallary .content__subtitle {
+    margin-block-end: 10px;
+  }
+
+  .gallary__item:not(:last-of-type) {
+    margin-block-end: 10px;
+  }
+}
+/* Футер */
+
+.footer {
+  display: grid;
+  position: relative;
+  justify-content: center;
+  align-content: center;
+  min-height: 100vh;
+}
+
+.footer__title {
+  font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  font-weight: 700;
+  color: var(--title-color);
+  text-shadow: 2px 2px 0 var(--accent-color);
 }
