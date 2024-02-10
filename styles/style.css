@@ -24,8 +24,8 @@
   position: absolute;
   inset-inline-end: 49px;
   inset-block-start: 21px;
-  font-weight: 400;
-  font-size: 18px;
+  font-weight: var(--main-font-weight);
+  font-size: var(--main-font-size);
   text-transform: uppercase;
   color: var(--accent-color);
 }
@@ -79,7 +79,7 @@
   padding: 0px 13px;
   color: var(--accent-color);
   font-family: inherit;
-  font-size: 18px;
+  font-size: var(--main-font-size);
   background-color: transparent;
   cursor: pointer;
   text-transform: lowercase;
@@ -88,7 +88,7 @@
 .header__title {
   padding-block-start: 239px;
   font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-  font-weight: 700;
+  font-weight: var(--font-weight-bold);
   color: var(--title-color);
   text-shadow: 4px 4px 0 var(--accent-color);
 }
@@ -98,13 +98,13 @@
   flex-direction: column;
   align-self: flex-end;
   inline-size: 50%;
-  padding: 78px 20px 135px 0;
+  padding: 76px 20px 137px 0;
 }
 
 .header__paragraph {
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 23px;
+  font-size: var(--main-font-size);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--main-line-height);
 }
 
 .title-decor {
@@ -173,7 +173,7 @@
 /* Основной контент */
 
 .main {
-  padding-block-start: 60px;
+  padding-block-start: 58px;
 }
 
 .content {
@@ -185,9 +185,9 @@
 
 .content__title {
   grid-row: span 2;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 130%;
+  font-weight: var(--font-weight-bold);
+  font-size: var(--main-font-size);
+  line-height: var(--main-line-height);
   color: var(--accent-color);
 }
 
@@ -198,15 +198,15 @@
 }
 
 .content__subtitle {
-  font-size: 18px;
-  line-height: 130%;
-  font-weight: 700;
+  font-weight: var(--font-weight-bold);
+  font-size: var(--main-font-size);
+  line-height: var(--main-line-height);
 }
 
 .content__paragraph {
-  font-size: 18px;
-  line-height: 130%;
-  font-weight: 400;
+  font-weight: var(--main-font-weight);
+  font-size: var(--main-font-size);
+  line-height: var(--main-line-height);
 }
 
 .text-link {
@@ -244,7 +244,7 @@
 }
 
 .regular-title {
-  font-weight: 400;
+  font-weight: var(--main-font-weight);
 }
 
 @media (width < 1024px) {
@@ -264,7 +264,7 @@
 
 @media (width < 576px) {
   .main {
-    padding-block-start: 42px;
+    padding-block-start: 40px;
   }
 
   .content {
@@ -340,7 +340,7 @@
 @media (width < 576px) {
   .gallary {
     display: block;
-    padding: 50px 10px 5px;
+    padding: 50px 10px 41px;
   }
 
   .gallary .content__subtitle {
@@ -354,16 +354,31 @@
 /* Футер */
 
 .footer {
-  display: grid;
   position: relative;
-  justify-content: center;
-  align-content: center;
+  display: flex;
   min-height: 100vh;
 }
 
 .footer__title {
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  padding: 281px 0;
   font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   font-weight: 700;
   color: var(--title-color);
   text-shadow: 2px 2px 0 var(--accent-color);
+}
+
+@media (width < 1024px) {
+  .footer__title {
+    padding: 434px 0;
+  }
+}
+
+@media (width < 576px) {
+  .footer__title {
+    font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+    padding: 257px 0;
+  }
 }
