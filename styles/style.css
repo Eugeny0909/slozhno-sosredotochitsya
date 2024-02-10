@@ -85,6 +85,22 @@
   text-transform: lowercase;
 }
 
+.header__theme-menu-button:hover {
+  outline: var(--hover-color);
+}
+
+.header__theme-menu-button:focus {
+  outline: none;
+}
+
+.header__theme-menu-button:focus-visible {
+  text-decoration: underline;
+}
+
+.header__theme-menu-button_active {
+  outline: 1px solid var(--accent-color);
+}
+
 .header__title {
   padding-block-start: 239px;
   font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
@@ -212,6 +228,18 @@
 .text-link {
   text-decoration: none;
   text-shadow: 2px 2px 0 var(--accent-color);
+}
+
+.text-link:hover {
+  text-decoration: underline;
+}
+
+.text-link:focus {
+  outline: none;
+}
+
+.text-link:focus-visible {
+  outline: 1px solid var(--main-text-color);
 }
 
 .content:nth-of-type(2) {
