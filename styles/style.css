@@ -5,7 +5,7 @@
   background-color: var(--bg-color);
   font-family: var(--main-font);
   color: var(--main-text-color);
-  background-image: url(../images/cover-image-dark.png);
+  background-image: var(--bg-image);
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
@@ -99,6 +99,7 @@
 
 .header__theme-menu-button_active {
   outline: 1px solid var(--accent-color);
+  pointer-events: none
 }
 
 .header__title {
@@ -393,7 +394,7 @@
   text-align: center;
   padding: 281px 0;
   font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-  font-weight: 700;
+  font-weight: var(--font-weight-bold);
   color: var(--title-color);
   text-shadow: 2px 2px 0 var(--accent-color);
 }
