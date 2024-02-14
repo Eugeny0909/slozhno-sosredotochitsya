@@ -17,7 +17,8 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  height: 100vh;
+  min-height: 768px;
 }
 
 .header__decor-text {
@@ -130,6 +131,10 @@
 }
 
 @media (width < 1024px) {
+  .header {
+    min-height: 1024px;
+  }
+
   .header__theme-menu-list {
     flex-direction: column;
     align-items: flex-end;
@@ -152,6 +157,10 @@
 }
 
 @media (width < 576px) {
+  .header {
+    min-height: 668px;
+  }
+
   .header__theme-menu-list {
     padding: 75px 11px 38px;
     gap: 13px;
@@ -384,7 +393,7 @@
 .footer {
   position: relative;
   display: flex;
-  min-height: 100vh;
+  height: 100vh;
 }
 
 .footer__title {
