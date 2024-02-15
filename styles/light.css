@@ -24,7 +24,7 @@
 }
 
 .theme_light .header__decor-text {
-  display: none;
+  visibility: hidden;
 }
 
 @media (prefers-color-scheme: light) {
@@ -44,6 +44,6 @@
   }
 
   .header__decor-text {
-    display: none;
+    visibility: hidden;
   }
 }
